@@ -1,7 +1,7 @@
 FROM alpine:3.4
 
 EXPOSE 5000
-WORKDIR /app
+WORKDIR /source
 CMD nginx -c /nginx.conf
 
 RUN apk add --no-cache nginx curl
@@ -11,5 +11,5 @@ RUN curl https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Lin
 RUN tar -zxvf /tmp/hugo.tar.gz -C /tmp
 RUN mv /tmp/hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 /tmp/hugo
 
-ONBUILD ADD . /source
+ONBUILD ADD . ./
 ONBUILD RUN /tmp/hugo -s /source -d /app
