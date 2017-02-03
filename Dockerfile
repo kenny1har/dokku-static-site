@@ -13,3 +13,4 @@ RUN mv /tmp/hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 /tmp/hugo
 
 ONBUILD ADD . ./
 ONBUILD RUN /tmp/hugo -s /source -d /app
+ONBUILD RUN rm -rf /source
