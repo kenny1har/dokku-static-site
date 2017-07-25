@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-EXPOSE 80
+EXPOSE 5000
 WORKDIR /source
 CMD nginx -c /nginx.conf
 
