@@ -12,4 +12,3 @@ RUN rm /tmp/hugo.tar.gz
 
 ONBUILD ADD . ./
 ONBUILD RUN /tmp/hugo -s /source -d /app
-ONBUILD RUN rm -rf /source
