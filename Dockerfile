@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM mhart/alpine-node
 
 WORKDIR /source
 CMD nginx -c /nginx.conf
